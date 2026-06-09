@@ -68,7 +68,7 @@ const Navbar = () => {
             key={link.name} 
             href={link.href}
             onClick={() => setIsOpen(false)}
-            className={`text-white text-3xl md:text-5xl font-black uppercase tracking-tighter hover:text-[#FF1E56] transition-colors ${isOpen ? 'opacity-100 translate-y-0 delay-200' : 'opacity-0 translate-y-10'}`}
+            className={`text-white text-lg md:text-base font-bold uppercase tracking-widest hover:text-[#FF1E56] transition-colors ${isOpen ? 'opacity-100 translate-y-0 delay-200' : 'opacity-0 translate-y-10'}`}
           >
             {link.name}
           </Link>
