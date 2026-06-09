@@ -13,10 +13,10 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = [
-    { name: 'Work', href: '#work' },
-    { name: 'Expertise', href: '#expertise' },
-    { name: 'About', href: '#about' },
+  const navLinks: { name: string; href: string }[] = [
+    { name: 'Services', href: '#services' },
+    { name: 'Case Studies', href: '#work' },
+    { name: 'Contact', href: '#contact' },
   ];
 
   return (
@@ -27,7 +27,7 @@ const Navbar = () => {
         
         {/* Logo - Minimalist approach */}
         <Link href="/" className="text-white text-xl font-black tracking-tighter uppercase">
-          Dev<span className="text-[#FF1E56]">.</span>Port
+          Edward<span className="text-[#FF1E56]">.</span>Okigbo
         </Link>
 
         {/* Desktop Nav: Clean spacing & subtle hover */}
@@ -42,10 +42,9 @@ const Navbar = () => {
             </Link>
           ))}
           
-          {/* Senior Designer CTA: High contrast Pink-Red */}
-          <button className="bg-[#FF1E56] hover:bg-[#D91547] text-white text-xs uppercase tracking-widest font-black px-8 py-3 rounded-sm transition-all transform hover:-translate-y-1 active:scale-95 shadow-[0_0_20px_rgba(255,30,86,0.3)]">
-            Let's Talk
-          </button>
+          <a href="#contact" className="bg-[#FF1E56] hover:bg-[#D91547] text-white text-xs uppercase tracking-widest font-black px-8 py-3 rounded-sm transition-all transform hover:-translate-y-1 active:scale-95 shadow-[0_0_20px_rgba(255,30,86,0.3)]">
+            Get in Touch
+          </a>
         </div>
 
         {/* Mobile Toggle - Custom minimalist icon */}
@@ -69,7 +68,7 @@ const Navbar = () => {
             key={link.name} 
             href={link.href}
             onClick={() => setIsOpen(false)}
-            className={`text-white text-5xl font-black uppercase tracking-tighter hover:text-[#FF1E56] transition-colors ${isOpen ? 'opacity-100 translate-y-0 delay-200' : 'opacity-0 translate-y-10'}`}
+            className={`text-white text-3xl md:text-5xl font-black uppercase tracking-tighter hover:text-[#FF1E56] transition-colors ${isOpen ? 'opacity-100 translate-y-0 delay-200' : 'opacity-0 translate-y-10'}`}
           >
             {link.name}
           </Link>

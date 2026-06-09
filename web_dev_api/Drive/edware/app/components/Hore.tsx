@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 const Hero = () => {
   return (
     <section className="relative min-h-screen bg-black pt-32 pb-20 px-6 flex flex-col justify-center overflow-hidden">
@@ -13,7 +11,7 @@ const Hero = () => {
           <div className="flex items-center gap-3 mb-6">
             <span className="w-2 h-2 bg-[#FF1E56] rounded-full animate-pulse"></span>
             <span className="text-[#FF1E56] text-xs font-black uppercase tracking-[0.3em]">
-              Edward Okigbo — Email Specialist
+              Edward Okigbo &mdash; Email Marketing Strategist
             </span>
           </div>
           
@@ -34,7 +32,7 @@ const Hero = () => {
 
           <div className="flex flex-col sm:flex-row gap-5">
             <button className="bg-[#FF1E56] hover:bg-[#D91547] text-white text-sm font-black uppercase tracking-widest px-8 py-4 rounded-sm transition-all hover:-translate-y-1 shadow-[0_0_20px_rgba(255,30,86,0.2)]">
-              Let's Scale Your Brand
+              Scale Your Revenue
             </button>
             <button className="text-white text-sm font-black uppercase tracking-widest px-8 py-4 border border-white/20 rounded-sm hover:bg-white/5 transition-colors">
               Read Case Studies
@@ -52,18 +50,18 @@ const Hero = () => {
             
             <div className="space-y-6 text-gray-400 text-sm md:text-base leading-relaxed font-medium">
               <p>
-                You have bigger fish to fry—like perfecting fulfillment, sourcing new products, and running daily operations. Constantly worrying about your email flows shouldn't be on your plate.
+                You have a business to grow&mdash;optimizing product-market fit, managing operations, and scaling customer acquisition. Dedicating hours to email flow strategy shouldn&apos;t be what pulls you away from the big picture.
               </p>
               <p>
-                I am an eCommerce Email Marketing Specialist who operates at the intersection of <strong className="text-white font-bold">customer psychology, sharp copywriting, and data optimization</strong>.
+                I am an eCommerce Email Marketing Strategist who operates at the intersection of <strong className="text-white font-bold">consumer psychology, persuasive copywriting, and data-driven optimization</strong>.
               </p>
               <p>
-                My goal is simple: to lift the marketing burden off your shoulders. I don't just send campaigns; I build predictable lifecycle systems that turn one-time buyers into raving, repeat customers. 
+                My mission is straightforward: to take the marketing weight off your shoulders. I don&apos;t just dispatch campaigns&mdash;I engineer predictable lifecycle systems that transform first-time buyers into loyal, lifetime customers. 
               </p>
               
               {/* Pull Quote / Core Promise */}
               <p className="border-l-2 border-[#FF1E56] pl-4 py-1 italic text-gray-300">
-                "Turning email into a channel for predictable, long-term growth—without suffocating contracts."
+                &ldquo;Turning email into a channel for sustainable, long-term revenue growth&mdash;no restrictive contracts, just results.&rdquo;
               </p>
             </div>
 
@@ -75,7 +73,7 @@ const Hero = () => {
               </div>
               <div>
                 <p className="text-white text-sm font-black uppercase tracking-widest">Edward Okigbo</p>
-                <p className="text-gray-500 text-xs font-bold uppercase tracking-wider mt-1">Retention Architect</p>
+                <p className="text-gray-500 text-xs font-bold uppercase tracking-wider mt-1">Email Marketing Strategist</p>
               </div>
             </div>
           </div>

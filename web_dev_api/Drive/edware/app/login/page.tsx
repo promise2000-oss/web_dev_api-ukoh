@@ -1,10 +1,10 @@
 'use client';
 
-import { useContext, useState } from 'react';
-import { AuthContext } from '../context/AuthContext';
-import {loginWithGoogle,loginWithApple,loginWithEmail,registerWithEmail,logout} from '../lib/authHelpers';
+import { useContext, useState, ChangeEvent } from 'react';
+import { AuthContext } from '../../context/AuthContext';
+import { loginWithGoogle, loginWithApple, loginWithEmail, registerWithEmail, logout } from '../../lib/authHelpers';
 
-export default function HomePage() {
+export default function LoginPage() {
   const { user } = useContext(AuthContext);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -13,7 +13,7 @@ export default function HomePage() {
     try {
       await loginWithEmail(email, password);
     } catch (err) {
-      alert(err.message);
+      alert((err as Error).message);
     }
   };
 
@@ -21,13 +21,12 @@ export default function HomePage() {
     try {
       await registerWithEmail(email, password);
     } catch (err) {
-      alert(err.message);
+      alert((err as Error).message);
     }
   };
 
   return (
     <main className="min-h-screen bg-gray-50">
-      {/* Navbar */}
       <nav className="bg-white shadow-md px-6 py-4 flex justify-between items-center">
         <h1 className="text-xl font-bold text-blue-600">EchoBoard</h1>
 
@@ -35,7 +34,7 @@ export default function HomePage() {
           {user && (
             <>
               <img
-                src={user.photoURL}
+                src={user.photoURL ?? ''}
                 alt="Profile"
                 className="w-10 h-10 rounded-full border"
               />
@@ -50,7 +49,6 @@ export default function HomePage() {
         </div>
       </nav>
 
-      {/* Main Content */}
       <section className="p-8 max-w-xl mx-auto">
         {user ? (
           <div>
@@ -67,14 +65,14 @@ export default function HomePage() {
                 type="email"
                 placeholder="Email"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
                 className="p-2 border rounded"
               />
               <input
                 type="password"
                 placeholder="Password"
                 value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)}
                 className="p-2 border rounded"
               />
               <div className="flex gap-2">
